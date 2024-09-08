@@ -70,4 +70,16 @@ class PagesController extends AppController
             throw new NotFoundException();
         }
     }
+
+    
+    public function phpinfo(): ?Response
+    {
+        phpinfo();
+        exit;
+    }
+    public function xdebuginfo(): ?Response
+    {
+        xdebug_info();
+        exit;
+    }
 }
