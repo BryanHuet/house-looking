@@ -68,14 +68,12 @@ class HouseTable extends Table
             ->notEmptyString('photo');
 
         $validator
-            ->scalar('size')
-            ->maxLength('size', 535)
+            ->integer('size')
             ->requirePresence('size', 'create')
             ->notEmptyString('size');
 
         $validator
-            ->scalar('ground')
-            ->maxLength('ground', 535)
+            ->integer('ground')
             ->requirePresence('ground', 'create')
             ->notEmptyString('ground');
 

@@ -1,0 +1,100 @@
+:root {
+    --dark-background: #1E1E1E; /* Dark grey for header, nav, footer */
+    --dark-text: #FFFFFF; /* White text for dark areas */
+    --dark-secondary-text: #B0B0B0; /* Light grey for secondary text in dark areas */
+    --light-background: #FFFFFF; /* White for body background */
+    --light-text: #333333; /* Dark grey for main content text */
+    --primary-color: #007BFF; /* Bootstrap primary blue */
+    --secondary-color: #6C757D; /* Bootstrap secondary grey */
+    --border-color: #DEE2E6; /* Light grey for borders */
+    --hover-color: #0056b3; /* Darker blue for hover effects */
+}
+
+body {
+    background-color: var(--light-background);
+    color: var(--light-text);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header and Nav Styles */
+.navbar {
+    background-color: var(--dark-background) !important;
+    color: var(--dark-text);
+}
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav .nav-link {
+    color: var(--dark-text);
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    color: var(--primary-color);
+}
+
+/* Main Content Styles */
+.container {
+    background-color: var(--light-background);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    flex: 1 0 auto;
+}
+.card {
+    background-color: var(--light-background);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--dark-text);
+}
+.btn-primary:hover {
+    background-color: var(--hover-color);
+    border-color: var(--hover-color);
+}
+
+/* Table Styles */
+.table {
+    color: var(--light-text);
+}
+.table thead th {
+    background-color: var(--border-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+/* DataTables Styles */
+.dataTables_wrapper .dataTables_length, 
+.dataTables_wrapper .dataTables_filter, 
+.dataTables_wrapper .dataTables_info, 
+.dataTables_wrapper .dataTables_processing, 
+.dataTables_wrapper .dataTables_paginate {
+    color: var(--light-text);
+}
+.page-item.active .page-link {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.page-link {
+    color: var(--primary-color);
+}
+.page-link:hover {
+    color: var(--hover-color);
+}
+
+/* Form Styles */
+input, select, textarea {
+    background-color: var(--light-background);
+    border: 1px solid var(--border-color);
+    color: var(--light-text);
+}
+input:focus, select:focus, textarea:focus {
+    border-color: var(--primary-color);
+}
+
+/* Footer Styles - Corrected */
+.footer {
+    background-color: var(--dark-background) !important;
+    color: var(--dark-text);
+    padding: 1rem 0;
+    margin-top: auto;
+}

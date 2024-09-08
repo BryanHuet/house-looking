@@ -16,11 +16,6 @@
  */
 ?>
 
-
-
-
- <h1>Hello</h1>
- 
  <table id="example" class="display" style="width:100%">
         <thead>
             <tr>
@@ -41,20 +36,42 @@ $('#example').DataTable({
     ajax: '/home/getAll',
     processing: true,    
     keys: true,
+    order: [[6, 'desc']],
     columns: [
         { data: 'title' },
         { data: 'price',
-          render: function (data, type) {
-            if (type === 'display') {
-                return new Intl.NumberFormat('fr-FR').format(data) + ' €';
-            }
-            return data;
-         },
+            render: function (data, type) {
+                if (type === 'display') {
+                    return new Intl.NumberFormat('fr-FR').format(data) + ' €';
+                }
+                return data;
+            },
         },
         { data: 'address' },
-        { data: 'size' },
-        { data: 'ground' },
-        { data: 'link' },
+        { data: 'size',           
+            render: function (data, type) {
+                if (type === 'display') {
+                    return new Intl.NumberFormat('fr-FR').format(data) + ' m²';
+                }
+                return data;
+            },
+        },
+        { data: 'ground',
+            render: function (data, type) {
+                if (type === 'display') {
+                    return new Intl.NumberFormat('fr-FR').format(data) + ' m²';
+                }
+                return data;
+            },
+        },
+        { data: 'link',
+            render: function (data, type) {
+            if (type === 'display') {
+                return '<a href="' + data + '"><i class="bi bi-box-arrow-up-right"></i></a>';
+            }
+            return data;
+            },
+         },
         { data: 'create_date' }
     ],
 

@@ -12,8 +12,8 @@ use Cake\ORM\Entity;
  * @property string $title
  * @property int $price
  * @property string $photo
- * @property string $size
- * @property string $ground
+ * @property int $size
+ * @property int $ground
  * @property string $address
  * @property string $link
  * @property string $create_date
