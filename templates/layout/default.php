@@ -68,7 +68,10 @@ $title = 'HouseLooking';
                         <a class="nav-link active" aria-current="page" href="#"><i class="fas fa-home me-1"></i>Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-tachometer-alt me-1"></i>Dashboard</a>
+                        <a class="nav-link" href="/"><i class="fas fa-tachometer-alt me-1"></i>Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cards"><i class="fa fa-address-card me-1"></i>Cards</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"><i class="fas fa-cog me-1"></i>Settings</a>
@@ -80,15 +83,6 @@ $title = 'HouseLooking';
 
     <div class="container mt-4">
         <?= $this->Flash->render() ?>
-        <div class="row">
-            <div class="col-md-12 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Welcome to HouseLooking</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
         <?= $this->fetch('content') ?>
     </div>
 

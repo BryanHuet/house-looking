@@ -56,6 +56,7 @@ return function (RouteBuilder $routes): void {
          * to use (in this case, templates/Pages/home.php)...
          */
         $builder->connect('/', ['controller' => 'Home', 'action' => 'index']);
+        $builder->connect('/cards', ['controller' => 'Home', 'action' => 'card']);
         $builder->connect('/info', ['controller' => 'Pages', 'action' => 'phpinfo']);
         $builder->connect('/cake', ['controller' => 'Pages', 'action' => 'display', 'home']);
         $builder->connect('/xdebug', ['controller' => 'Pages', 'action' => 'xdebuginfo']);
